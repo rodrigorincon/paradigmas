@@ -16,7 +16,7 @@ environments {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost/testeGrails?useUnicode=yes&characterEnconding=UTF-8"
             username = "root"
-            password = "geoflavia"
+            password = "*****"
         }
     }
     test {
@@ -24,7 +24,7 @@ environments {
             dbCreate = "update"
             url = "jdbc:mysql://localhost/testeGrails?useUnicode=yes&characterEnconding=UTF-8"
             username = "root"
-            password = "geoflavia"
+            password = "*****"
         }
     }
     production {
@@ -32,7 +32,7 @@ environments {
             dbCreate = "update"
             url = "jdbc:mysql://localhost/testeGrails?useUnicode=yes&characterEnconding=UTF-8"
             username = "root"
-            password = "geoflavia"
+            password = "*****"
             pooled = true
             properties {
                maxActive = -1
