@@ -6,7 +6,6 @@ Este projeto abordará os seguintes paradigmas de programação:
   <li>Orientado a Convenções sobre Configuração, usando Groovy e o framework Grails</li>
   <li>Funcional, usando a linguagem Haskel</li>
   <li>Lógico, usando a linguagem Prolog</li>
-  <li>Multi-agentes (paradigma concorrente), usando a linguagem Java com o framework Jade</li>
 </ul>
 É abordada a diferença de modelar e pensar o problema em cada um destes paradigmas bem como uma implementação básica de cada uma.
 <hr>
@@ -27,7 +26,6 @@ Esta visão permite ao programador trabalhar num nível maior de abstração sem
 
 <h3>Paradigma Funcional</h3>
 <h3>Paradigma Lógico</h3>
-<h3>Paradigma Concorrente ou multi-agene</h3>
 <hr>
 # Instalações das linguagens e ferramentas no Ubuntu 12.04
 <h3>Grails 2.2.4</h3>
@@ -49,4 +47,3 @@ Neste projeto, estamos utilizando o Grails 2.2.4
 <h3>Prolog</h3>
 
 <hr>
-<h3>Jade</h3>
