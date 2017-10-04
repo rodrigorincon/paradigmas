@@ -5,4 +5,4 @@ Se inserir, por exemplo, 20 e depois 50, no vetor principal estará [20,50] enqu
 
 Como se trata de uma pilha, a inserção e remoção já são O(1) naturalmente, pois ambos trabalham apenas com a última posição de mesmo. Inserir um valor novo ao fim do vetor não exige percorrer todo o vetor para chegar ao seu fim,o python guarda acesso direto a ele, assim como ao deletá-lo o único trabalho do python é acessar a última posição diretamente e seu antecessor para atualizar a lista. O método "min", por também trabalhar apenas com a última posição de seu vetor, faz uso da mesma lógica do vetor principal.
 
-#Desafio 2 
+# Desafio 2 
