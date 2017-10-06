@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  resources :tasks
+
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
+  get 'anexos/:id', to: 'anexos#show'
+  patch 'tasks/:id/complete', to: 'tasks#complete'
 
   resources :sessions, only: [:create, :destroy]
-  resource :home, only: [:show]
 
-  root to: "home#show"
+  root to: "tasks#index"
 end

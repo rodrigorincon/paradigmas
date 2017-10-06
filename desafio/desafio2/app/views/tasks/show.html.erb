@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @task.nome %>
+</p>
+
+<p>
+  <strong>Prioridade:</strong>
+  <%= @task.prioridade %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @task.descricao %>
+</p>
+
+<p>
+  <strong>Status</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>Quem criou</strong>
+  <%= @task.criador.name %>
+</p>
+
+<% if @task.done? %>
+  <p>
+    <strong>Quem fechou</strong>
+    <%= @task.finalizador.name %>
+  </p>
+<% end %>
+
+<p>
+  <strong>Anexos:</strong>
+  <% @task.anexos.each do |anexo| %>
+    <a href="/anexos/<%= anexo.id %>"><%= anexo.name %></a> <br>
+  <% end %>
+</p>
+
+<% unless @task.done? %>
+  <%= form_for(@task, :url => "/tasks/#{@task.id}/complete") do |f| %>
+    <%= f.submit "completar tarefa" %>
+  <% end %>
+<% end %>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171006041840) do
+ActiveRecord::Schema.define(version: 20171006060127) do
+
+  create_table "anexos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "path"
+    t.string   "myme_type"
+    t.integer  "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "nome"
+    t.integer  "prioridade"
+    t.string   "descricao"
+    t.integer  "status"
+    t.integer  "criador_id"
+    t.integer  "finalizador_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"
