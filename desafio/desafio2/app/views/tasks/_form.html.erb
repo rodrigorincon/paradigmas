@@ -25,6 +25,11 @@
   </div>
 
   <% if @task.id %>
+    <ul>
+      <% @task.anexos.each do |anexo| %>
+        <li> <a href="/anexos/<%= anexo.id %>"><%= anexo.name %></a> <br> </li>
+      <% end %>
+    </ul>
     <%= f.label 'Selecione um Anexo' %>
     <%= f.file_field :anexo %>
   <% end %>
