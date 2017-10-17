@@ -3,11 +3,29 @@ class ImagesController < ApplicationController
 
   before_action :set_request_url
 
-  # GET /images/1
+  # GET /images/1/small
   def show
-    image = Image.find(params[:id])
-    image_json = {id: image.id, url_smal: @request_url+image.get_url_smal, url_medium: @request_url+image.get_url_medium, url_large: @request_url+image.get_url_large}
-    render json: image_json
+    image = Image.find_by_id(params[:id])
+    size = params[:size]
+
+    if image && size
+      file_path = case size
+      when "small"
+        "#{Image::SMALL_PATH}/#{image.nome}"
+      when "medium"
+        "#{Image::MEDIUM_PATH}/#{image.nome}"
+      when "large"
+        "#{Image::LARGE_PATH}/#{image.nome}"
+      else
+        nil
+      end
+
+      if file_path
+        send_file file_path ,:filename => image.nome, :status => 200, layout: false, :type => "image/jpg"
+      else
+        render :text => "Arquivo inacessível, tente novamente.", :status => 404
+      end
+    end
   end
 
   # POST /images
@@ -16,9 +34,9 @@ class ImagesController < ApplicationController
 
     images_objects = []
     images.each do |image|
-      img_name = image["url"].split("/").last
-      img_stream = HTTParty.get(image["url"])
-      images_objects << Image.create_image(img_name, img_stream)
+      img_url = image["url"]
+      img_name = img_url.split("/").last
+      images_objects << Image.create_image(img_name, img_url)
     end
 
     unless images_objects.any?{|image| image.id.nil?}

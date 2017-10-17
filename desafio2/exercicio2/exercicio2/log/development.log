@@ -744,3 +744,243 @@ No serializer found for resource: {:id=>11, :url_smal=>"localhost:3000/documents
 Completed 201 Created in 9331ms (Views: 2.7ms | ActiveRecord: 1163.7ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (148.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (120.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateImages (20171017030327)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171017030327"]]
+  [1m[35m (110.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 06:29:37.117928"], ["updated_at", "2017-10-17 06:29:37.117928"]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 04:30:03 -0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ImagesController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 06:30:05.227061"], ["updated_at", "2017-10-17 06:30:05.227061"]]
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 06:30:06.033268"], ["updated_at", "2017-10-17 06:30:06.033268"]]
+  [1m[35m (78.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 06:30:06.890374"], ["updated_at", "2017-10-17 06:30:06.890374"]]
+  [1m[35m (98.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 06:30:07.731900"], ["updated_at", "2017-10-17 06:30:07.731900"]]
+  [1m[35m (111.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 06:30:08.423083"], ["updated_at", "2017-10-17 06:30:08.423083"]]
+  [1m[35m (130.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 06:30:09.732299"], ["updated_at", "2017-10-17 06:30:09.732299"]]
+  [1m[35m (117.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 06:30:10.649917"], ["updated_at", "2017-10-17 06:30:10.649917"]]
+  [1m[35m (188.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 06:30:11.607907"], ["updated_at", "2017-10-17 06:30:11.607907"]]
+  [1m[35m (196.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 06:30:12.396449"], ["updated_at", "2017-10-17 06:30:12.396449"]]
+  [1m[35m (106.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 06:30:13.282374"], ["updated_at", "2017-10-17 06:30:13.282374"]]
+  [1m[35m (130.3ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>1, :url_smal=>"localhost:3000/documents/small/b737_5.jpg", :url_medium=>"localhost:3000/documents/medium/b737_5.jpg", :url_large=>"localhost:3000/documents/large/b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.39ms)
+Completed 201 Created in 9573ms (Views: 3.3ms | ActiveRecord: 1224.2ms)
+
+
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 04:47:30 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 06:47:31.587970"], ["updated_at", "2017-10-17 06:47:31.587970"]]
+  [1m[35m (79.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 06:47:32.473179"], ["updated_at", "2017-10-17 06:47:32.473179"]]
+  [1m[35m (159.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 06:47:33.458822"], ["updated_at", "2017-10-17 06:47:33.458822"]]
+  [1m[35m (105.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 06:47:34.363149"], ["updated_at", "2017-10-17 06:47:34.363149"]]
+  [1m[35m (100.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 06:47:35.043779"], ["updated_at", "2017-10-17 06:47:35.043779"]]
+  [1m[35m (145.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 06:47:36.743969"], ["updated_at", "2017-10-17 06:47:36.743969"]]
+  [1m[35m (137.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 06:47:37.723620"], ["updated_at", "2017-10-17 06:47:37.723620"]]
+  [1m[35m (101.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 06:47:38.616945"], ["updated_at", "2017-10-17 06:47:38.616945"]]
+  [1m[35m (106.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 06:47:39.312007"], ["updated_at", "2017-10-17 06:47:39.312007"]]
+  [1m[35m (177.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 06:47:40.236675"], ["updated_at", "2017-10-17 06:47:40.236675"]]
+  [1m[35m (150.9ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>11, :url_smal=>"localhost:3000/images/11/small", :url_medium=>"localhost:3000/images/11/medium", :url_large=>"localhost:3000/images/11/large"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.67ms)
+Completed 201 Created in 9803ms (Views: 2.8ms | ActiveRecord: 1269.0ms)
+
+
+Started GET "/images/11/small" for 127.0.0.1 at 2017-10-17 04:48:23 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"11", "size"=>"small"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Sent file /b737_5.jpg (0.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::MissingFile (Cannot read file /b737_5.jpg):
+  
+app/controllers/images_controller.rb:22:in `show'
+Started GET "/images/11/small" for 127.0.0.1 at 2017-10-17 04:49:18 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"11", "size"=>"small"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Sent file /b737_5.jpg (0.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::MissingFile (Cannot read file /b737_5.jpg):
+  
+app/controllers/images_controller.rb:24:in `show'
+Started GET "/images/11/small" for 127.0.0.1 at 2017-10-17 04:49:56 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"11", "size"=>"small"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `SMALL_PATH' for #<Class:0x00000003d86a50>):
+  
+app/controllers/images_controller.rb:14:in `show'
+Started GET "/images/11/small" for 127.0.0.1 at 2017-10-17 04:50:22 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"11", "size"=>"small"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Sent file /b737_5.jpg (0.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::MissingFile (Cannot read file /b737_5.jpg):
+  
+app/controllers/images_controller.rb:26:in `show'
+Started GET "/images/11/small" for 127.0.0.1 at 2017-10-17 04:51:52 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"11", "size"=>"small"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Sent file /home/rodrigo/docker/paradigmas/desafio2/exercicio2/exercicio2/documents/small/b737_5.jpg (0.1ms)
+Completed 200 OK in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/images/11/medium" for 127.0.0.1 at 2017-10-17 04:52:04 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"11", "size"=>"medium"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Sent file /home/rodrigo/docker/paradigmas/desafio2/exercicio2/exercicio2/documents/medium/b737_5.jpg (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/images/11/large" for 127.0.0.1 at 2017-10-17 04:52:12 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"11", "size"=>"large"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Sent file /home/rodrigo/docker/paradigmas/desafio2/exercicio2/exercicio2/documents/large/b737_5.jpg (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/images/14/large" for 127.0.0.1 at 2017-10-17 04:52:19 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"14", "size"=>"large"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Sent file /home/rodrigo/docker/paradigmas/desafio2/exercicio2/exercicio2/documents/large/b777_4.jpg (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/images/14/" for 127.0.0.1 at 2017-10-17 04:52:24 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/14"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/14/a" for 127.0.0.1 at 2017-10-17 04:52:30 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"14", "size"=>"a"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Sent file  (0.2ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::MissingFile (Cannot read file ):
+  
+app/controllers/images_controller.rb:26:in `show'
+Started GET "/images/14/a" for 127.0.0.1 at 2017-10-17 04:53:36 -0200
+Processing by ImagesController#show as HTML
+  Parameters: {"id"=>"14", "size"=>"a"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/14/a" for 127.0.0.1 at 2017-10-17 04:53:57 -0200
+Processing by ImagesController#show as */*
+  Parameters: {"id"=>"14", "size"=>"a"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/14/small" for 127.0.0.1 at 2017-10-17 04:54:26 -0200
+Processing by ImagesController#show as */*
+  Parameters: {"id"=>"14", "size"=>"small"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Sent file /home/rodrigo/docker/paradigmas/desafio2/exercicio2/exercicio2/documents/small/b777_4.jpg (0.2ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/images/14/s" for 127.0.0.1 at 2017-10-17 04:54:31 -0200
+Processing by ImagesController#show as */*
+  Parameters: {"id"=>"14", "size"=>"s"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
