@@ -1,0 +1,746 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (98.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (98.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateImages (20171017030327)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171017030327"]]
+  [1m[35m (125.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 03:41:30.788664"], ["updated_at", "2017-10-17 03:41:30.788664"]]
+  [1m[35m (82.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-17 01:41:51 -0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rodrigo/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-10-17 01:41:51 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images" for 127.0.0.1 at 2017-10-17 01:42:03 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images" for 127.0.0.1 at 2017-10-17 01:42:11 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 01:42:41 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+URI::InvalidURIError (URI must be ascii only "http://\u{200b}54.152.221.29/images.json\u{200b}"):
+  
+app/controllers/images_controller.rb:13:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 01:43:57 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 347ms
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/images_controller.rb:17:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 01:54:28 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 420ms
+
+
+  
+NameError (undefined local variable or method `image' for #<ImagesController:0x000000049834e8>
+Did you mean?  images):
+  
+app/controllers/images_controller.rb:14:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 01:54:52 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 864ms
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/images_controller.rb:22:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 02:04:55 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 8427ms
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/images_controller.rb:23:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 02:15:42 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 928ms
+
+
+  
+NameError (undefined local variable or method `input' for #<ImagesController:0x000000042ff388>):
+  
+app/controllers/images_controller.rb:21:in `block (2 levels) in create'
+app/controllers/images_controller.rb:21:in `open'
+app/controllers/images_controller.rb:21:in `block in create'
+app/controllers/images_controller.rb:14:in `each'
+app/controllers/images_controller.rb:14:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 02:17:01 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 7231ms
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/images_controller.rb:25:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 02:21:05 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 7856ms
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/images_controller.rb:25:in `create'
+Started GET "/documents/b737_1.jpg" for 127.0.0.1 at 2017-10-17 02:21:37 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/documents/b737_1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/b737_1.jpg" for 127.0.0.1 at 2017-10-17 02:21:47 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/b737_1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (19.4ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "a"], ["created_at", "2017-10-17 04:32:50.630975"], ["updated_at", "2017-10-17 04:32:50.630975"]]
+  [1m[35m (56.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/images" for 127.0.0.1 at 2017-10-17 02:55:56 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 861ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for Image.):
+  
+app/models/image.rb:9:in `create_image'
+app/controllers/images_controller.rb:18:in `block in create'
+app/controllers/images_controller.rb:15:in `each'
+app/controllers/images_controller.rb:15:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 02:56:38 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 04:56:39.265600"], ["updated_at", "2017-10-17 04:56:39.265600"]]
+  [1m[35m (182.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 04:56:40.146950"], ["updated_at", "2017-10-17 04:56:40.146950"]]
+  [1m[35m (77.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 04:56:40.903742"], ["updated_at", "2017-10-17 04:56:40.903742"]]
+  [1m[35m (109.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 04:56:41.694528"], ["updated_at", "2017-10-17 04:56:41.694528"]]
+  [1m[35m (72.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 04:56:42.287472"], ["updated_at", "2017-10-17 04:56:42.287472"]]
+  [1m[35m (89.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 04:56:43.488575"], ["updated_at", "2017-10-17 04:56:43.488575"]]
+  [1m[35m (86.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 04:56:44.283084"], ["updated_at", "2017-10-17 04:56:44.283084"]]
+  [1m[35m (56.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 04:56:45.041492"], ["updated_at", "2017-10-17 04:56:45.041492"]]
+  [1m[35m (75.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 04:56:45.632361"], ["updated_at", "2017-10-17 04:56:45.632361"]]
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 04:56:46.418179"], ["updated_at", "2017-10-17 04:56:46.418179"]]
+  [1m[35m (96.6ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>2, :nome=>"b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.21ms)
+Completed 201 Created in 8139ms (Views: 3.5ms | ActiveRecord: 948.2ms)
+
+
+Started GET "/b737_1.jpg" for 127.0.0.1 at 2017-10-17 02:57:35 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/b737_1.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 03:02:18 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 05:02:19.081848"], ["updated_at", "2017-10-17 05:02:19.081848"]]
+  [1m[35m (144.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 05:02:19.914365"], ["updated_at", "2017-10-17 05:02:19.914365"]]
+  [1m[35m (165.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 05:02:20.768806"], ["updated_at", "2017-10-17 05:02:20.768806"]]
+  [1m[35m (122.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 05:02:21.607987"], ["updated_at", "2017-10-17 05:02:21.607987"]]
+  [1m[35m (116.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 05:02:22.224787"], ["updated_at", "2017-10-17 05:02:22.224787"]]
+  [1m[35m (163.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 05:02:23.490100"], ["updated_at", "2017-10-17 05:02:23.490100"]]
+  [1m[35m (140.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 05:02:24.347731"], ["updated_at", "2017-10-17 05:02:24.347731"]]
+  [1m[35m (182.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 05:02:25.230150"], ["updated_at", "2017-10-17 05:02:25.230150"]]
+  [1m[35m (110.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 05:02:25.879364"], ["updated_at", "2017-10-17 05:02:25.879364"]]
+  [1m[35m (81.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 05:02:26.652497"], ["updated_at", "2017-10-17 05:02:26.652497"]]
+  [1m[35m (174.6ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>12, :url=>"localhost/documents/b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.21ms)
+Completed 201 Created in 8620ms (Views: 1.9ms | ActiveRecord: 1411.6ms)
+
+
+Started POST "/images" for 127.0.0.1 at 2017-10-17 03:03:17 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 05:03:18.395898"], ["updated_at", "2017-10-17 05:03:18.395898"]]
+  [1m[35m (120.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 05:03:19.200081"], ["updated_at", "2017-10-17 05:03:19.200081"]]
+  [1m[35m (106.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 05:03:20.019670"], ["updated_at", "2017-10-17 05:03:20.019670"]]
+  [1m[35m (103.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 05:03:20.829520"], ["updated_at", "2017-10-17 05:03:20.829520"]]
+  [1m[35m (182.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 05:03:21.522024"], ["updated_at", "2017-10-17 05:03:21.522024"]]
+  [1m[35m (120.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 05:03:22.784789"], ["updated_at", "2017-10-17 05:03:22.784789"]]
+  [1m[35m (168.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 05:03:23.655232"], ["updated_at", "2017-10-17 05:03:23.655232"]]
+  [1m[35m (196.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 05:03:24.556975"], ["updated_at", "2017-10-17 05:03:24.556975"]]
+  [1m[35m (200.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 05:03:25.292546"], ["updated_at", "2017-10-17 05:03:25.292546"]]
+  [1m[35m (143.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 05:03:26.108509"], ["updated_at", "2017-10-17 05:03:26.108509"]]
+  [1m[35m (161.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8756ms (ActiveRecord: 1515.0ms)
+
+
+  
+TypeError (no implicit conversion of Fixnum into String):
+  
+app/controllers/images_controller.rb:22:in `+'
+app/controllers/images_controller.rb:22:in `block in create'
+app/controllers/images_controller.rb:22:in `map'
+app/controllers/images_controller.rb:22:in `create'
+Started POST "/images" for 127.0.0.1 at 2017-10-17 03:03:45 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 05:03:46.262112"], ["updated_at", "2017-10-17 05:03:46.262112"]]
+  [1m[35m (97.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 05:03:47.063697"], ["updated_at", "2017-10-17 05:03:47.063697"]]
+  [1m[35m (163.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 05:03:47.959408"], ["updated_at", "2017-10-17 05:03:47.959408"]]
+  [1m[35m (133.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 05:03:48.804722"], ["updated_at", "2017-10-17 05:03:48.804722"]]
+  [1m[35m (129.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 05:03:49.457532"], ["updated_at", "2017-10-17 05:03:49.457532"]]
+  [1m[35m (189.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 05:03:50.773949"], ["updated_at", "2017-10-17 05:03:50.773949"]]
+  [1m[35m (148.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 05:03:51.643652"], ["updated_at", "2017-10-17 05:03:51.643652"]]
+  [1m[35m (133.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 05:03:52.490419"], ["updated_at", "2017-10-17 05:03:52.490419"]]
+  [1m[35m (152.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 05:03:53.151819"], ["updated_at", "2017-10-17 05:03:53.151819"]]
+  [1m[35m (120.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 05:03:53.961746"], ["updated_at", "2017-10-17 05:03:53.961746"]]
+  [1m[35m (111.5ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>32, :url=>"localhost:3000/documents/b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.23ms)
+Completed 201 Created in 8690ms (Views: 2.1ms | ActiveRecord: 1386.4ms)
+
+
+Started POST "/images/3" for 127.0.0.1 at 2017-10-17 03:12:16 -0200
+  
+ActionController::RoutingError (No route matches [POST] "/images/3"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/images/3" for 127.0.0.1 at 2017-10-17 03:12:47 -0200
+Processing by ImagesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mImage Load (0.3ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 16ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/images/7" for 127.0.0.1 at 2017-10-17 03:12:59 -0200
+Processing by ImagesController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/11" for 127.0.0.1 at 2017-10-17 03:21:15 -0200
+  
+SyntaxError (/home/rodrigo/docker/paradigmas/desafio2/exercicio2/exercicio2/app/controllers/images_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  before_action: set_request_url
+                ^):
+  
+app/controllers/images_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+Started GET "/images/11" for 127.0.0.1 at 2017-10-17 03:21:37 -0200
+  
+SyntaxError (/home/rodrigo/docker/paradigmas/desafio2/exercicio2/exercicio2/app/controllers/images_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+  before_action: :set_request_url
+                ^):
+  
+app/controllers/images_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+Started GET "/images/11" for 127.0.0.1 at 2017-10-17 03:22:12 -0200
+Processing by ImagesController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mImage Load (0.2ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/13" for 127.0.0.1 at 2017-10-17 03:22:24 -0200
+Processing by ImagesController#show as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mImage Load (0.1ms)[0m  [1m[34mSELECT  "images".* FROM "images" WHERE "images"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 03:22:30 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 05:22:31.596594"], ["updated_at", "2017-10-17 05:22:31.596594"]]
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 05:22:32.421174"], ["updated_at", "2017-10-17 05:22:32.421174"]]
+  [1m[35m (210.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 05:22:33.320968"], ["updated_at", "2017-10-17 05:22:33.320968"]]
+  [1m[35m (102.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 05:22:34.129115"], ["updated_at", "2017-10-17 05:22:34.129115"]]
+  [1m[35m (168.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 05:22:34.812198"], ["updated_at", "2017-10-17 05:22:34.812198"]]
+  [1m[35m (94.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 05:22:36.030225"], ["updated_at", "2017-10-17 05:22:36.030225"]]
+  [1m[35m (190.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 05:22:36.946996"], ["updated_at", "2017-10-17 05:22:36.946996"]]
+  [1m[35m (146.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 05:22:37.822410"], ["updated_at", "2017-10-17 05:22:37.822410"]]
+  [1m[35m (102.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 05:22:38.446947"], ["updated_at", "2017-10-17 05:22:38.446947"]]
+  [1m[35m (122.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 05:22:39.256360"], ["updated_at", "2017-10-17 05:22:39.256360"]]
+  [1m[35m (221.1ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>42, :url_smal=>"localhost:3000/documents/b737_5.jpg", :url_medium=>"localhost:3000/documents/b737_5.jpg", :url_large=>"localhost:3000/documents/b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.94ms)
+Completed 201 Created in 8750ms (Views: 1.5ms | ActiveRecord: 1453.0ms)
+
+
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 03:37:31 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 893ms
+
+
+  
+NameError (undefined local variable or method `create_directories' for Image (call 'Image.connection' to establish a connection):Class
+Did you mean?  create_with):
+  
+app/models/image.rb:9:in `create_image'
+app/controllers/images_controller.rb:21:in `block in create'
+app/controllers/images_controller.rb:18:in `each'
+app/controllers/images_controller.rb:18:in `create'
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 03:38:06 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 05:38:07.694724"], ["updated_at", "2017-10-17 05:38:07.694724"]]
+  [1m[35m (98.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 05:38:08.484655"], ["updated_at", "2017-10-17 05:38:08.484655"]]
+  [1m[35m (175.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 05:38:09.352329"], ["updated_at", "2017-10-17 05:38:09.352329"]]
+  [1m[35m (83.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 05:38:10.144462"], ["updated_at", "2017-10-17 05:38:10.144462"]]
+  [1m[35m (112.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 05:38:10.776447"], ["updated_at", "2017-10-17 05:38:10.776447"]]
+  [1m[35m (79.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 05:38:11.936198"], ["updated_at", "2017-10-17 05:38:11.936198"]]
+  [1m[35m (175.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 05:38:12.815245"], ["updated_at", "2017-10-17 05:38:12.815245"]]
+  [1m[35m (105.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 05:38:13.633141"], ["updated_at", "2017-10-17 05:38:13.633141"]]
+  [1m[35m (119.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 05:38:14.265543"], ["updated_at", "2017-10-17 05:38:14.265543"]]
+  [1m[35m (197.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 05:38:15.230846"], ["updated_at", "2017-10-17 05:38:15.230846"]]
+  [1m[35m (196.8ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>52, :url_smal=>"localhost:3000/documents/small/b737_5.jpg", :url_medium=>"localhost:3000/documents/medium/b737_5.jpg", :url_large=>"localhost:3000/documents/large/b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.36ms)
+Completed 201 Created in 8622ms (Views: 2.0ms | ActiveRecord: 1351.2ms)
+
+
+Started GET "/documents/small/b737_5.jpg" for 127.0.0.1 at 2017-10-17 03:38:29 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/documents/small/b737_5.jpg"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (104.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (101.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateImages (20171017030327)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171017030327"]]
+  [1m[35m (122.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 05:40:09.184388"], ["updated_at", "2017-10-17 05:40:09.184388"]]
+  [1m[35m (78.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 04:03:23 -0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 882ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 2)):
+  
+app/models/image.rb:14:in `create_image'
+app/models/image.rb:17:in `create_image'
+app/controllers/images_controller.rb:21:in `block in create'
+app/controllers/images_controller.rb:18:in `each'
+app/controllers/images_controller.rb:18:in `create'
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 04:04:23 -0200
+Processing by ImagesController#create as */*
+Completed 500 Internal Server Error in 1350ms
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 2)):
+  
+app/models/image.rb:14:in `create_image'
+app/models/image.rb:22:in `create_image'
+app/controllers/images_controller.rb:21:in `block in create'
+app/controllers/images_controller.rb:18:in `each'
+app/controllers/images_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (134.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (111.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateImages (20171017030327)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171017030327"]]
+  [1m[35m (121.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 06:06:21.288748"], ["updated_at", "2017-10-17 06:06:21.288748"]]
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 04:12:37 -0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ImagesController#create as */*
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 06:12:38.493136"], ["updated_at", "2017-10-17 06:12:38.493136"]]
+  [1m[35m (135.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 06:12:39.345146"], ["updated_at", "2017-10-17 06:12:39.345146"]]
+  [1m[35m (138.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 06:12:40.203769"], ["updated_at", "2017-10-17 06:12:40.203769"]]
+  [1m[35m (122.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 06:12:41.038528"], ["updated_at", "2017-10-17 06:12:41.038528"]]
+  [1m[35m (119.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 06:12:41.690558"], ["updated_at", "2017-10-17 06:12:41.690558"]]
+  [1m[35m (89.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 06:12:42.920733"], ["updated_at", "2017-10-17 06:12:42.920733"]]
+  [1m[35m (101.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 06:12:43.790741"], ["updated_at", "2017-10-17 06:12:43.790741"]]
+  [1m[35m (108.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 06:12:44.629423"], ["updated_at", "2017-10-17 06:12:44.629423"]]
+  [1m[35m (600.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 06:12:45.784616"], ["updated_at", "2017-10-17 06:12:45.784616"]]
+  [1m[35m (79.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 06:12:46.613817"], ["updated_at", "2017-10-17 06:12:46.613817"]]
+  [1m[35m (158.2ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>1, :url_smal=>"localhost:3000/documents/small/b737_5.jpg", :url_medium=>"localhost:3000/documents/medium/b737_5.jpg", :url_large=>"localhost:3000/documents/large/b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.4ms)
+Completed 201 Created in 9246ms (Views: 3.4ms | ActiveRecord: 1657.2ms)
+
+
+Started POST "/images/" for 127.0.0.1 at 2017-10-17 04:18:57 -0200
+Processing by ImagesController#create as */*
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_5.jpg"], ["created_at", "2017-10-17 06:19:08.111794"], ["updated_at", "2017-10-17 06:19:08.111794"]]
+  [1m[35m (80.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_5.jpg"], ["created_at", "2017-10-17 06:19:08.949547"], ["updated_at", "2017-10-17 06:19:08.949547"]]
+  [1m[35m (96.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_3.jpg"], ["created_at", "2017-10-17 06:19:09.878785"], ["updated_at", "2017-10-17 06:19:09.878785"]]
+  [1m[35m (77.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_4.jpg"], ["created_at", "2017-10-17 06:19:10.706232"], ["updated_at", "2017-10-17 06:19:10.706232"]]
+  [1m[35m (103.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_3.jpg"], ["created_at", "2017-10-17 06:19:11.409670"], ["updated_at", "2017-10-17 06:19:11.409670"]]
+  [1m[35m (178.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_2.jpg"], ["created_at", "2017-10-17 06:19:12.845921"], ["updated_at", "2017-10-17 06:19:12.845921"]]
+  [1m[35m (121.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_2.jpg"], ["created_at", "2017-10-17 06:19:13.778354"], ["updated_at", "2017-10-17 06:19:13.778354"]]
+  [1m[35m (155.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b777_1.jpg"], ["created_at", "2017-10-17 06:19:14.727330"], ["updated_at", "2017-10-17 06:19:14.727330"]]
+  [1m[35m (81.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_4.jpg"], ["created_at", "2017-10-17 06:19:15.412076"], ["updated_at", "2017-10-17 06:19:15.412076"]]
+  [1m[35m (163.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "images" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "b737_1.jpg"], ["created_at", "2017-10-17 06:19:16.328027"], ["updated_at", "2017-10-17 06:19:16.328027"]]
+  [1m[35m (100.5ms)[0m  [1m[36mcommit transaction[0m
+No serializer found for resource: {:id=>11, :url_smal=>"localhost:3000/documents/small/b737_5.jpg", :url_medium=>"localhost:3000/documents/medium/b737_5.jpg", :url_large=>"localhost:3000/documents/large/b737_5.jpg"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.61ms)
+Completed 201 Created in 9331ms (Views: 2.7ms | ActiveRecord: 1163.7ms)
+
+
