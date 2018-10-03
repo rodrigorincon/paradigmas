@@ -1,0 +1,85 @@
+ubs_lat_29:
+  latitude: 29
+  longitute: 10
+
+ubs_lat_29_00001:
+  latitude: 29.00001
+  longitute: 10
+
+ubs_lat_29_3:
+  latitude: 29.3
+  longitute: 10
+
+ubs_lat_29_3001:
+  latitude: 29.3001
+  longitute: 10
+
+ubs_lat_29_352:
+  latitude: 29.352
+  longitute: 10
+
+ubs_lat_29_3551:
+  latitude: 29.3551
+  longitute: 10
+
+ubs_lat_29_356:
+  latitude: 29.356
+  longitute: 10
+
+ubs_lat_29_358:
+  latitude: 29.358
+  longitute: 10
+
+ubs_lat_29_39:
+  latitude: 29.39
+  longitute: 10
+
+ubs_lat_29_4:
+  latitude: 29.4
+  longitute: 10
+
+ubs_lat_29_41:
+  latitude: 29.41
+  longitute: 10
+
+ubs_lat_30:
+  latitude: 30
+  longitute: 10
+
+
+
+ubs_lat_menos_30:
+  latitude: -30
+  longitute: 10
+
+ubs_lat_menos_29:
+  latitude: -29
+  longitute: 10
+
+ubs_lat_menos_31:
+  latitude: -31
+  longitute: 10
+
+ubs_lat_menos_30_3:
+  latitude: -30.3
+  longitute: 10
+
+ubs_lat_menos_30_4:
+  latitude: -30.4
+  longitute: 10
+
+ubs_lat_menos_30_31:
+  latitude: -30.31
+  longitute: 10
+
+ubs_lat_menos_30_35:
+  latitude: -30.35
+  longitute: 10
+
+ubs_lat_menos_30_39:
+  latitude: -30.39
+  longitute: 10
+
+ubs_lat_menos_30_35_long_11:
+  latitude: -30.35
+  longitute: 11
